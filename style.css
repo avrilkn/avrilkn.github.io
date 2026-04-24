@@ -13,7 +13,16 @@ body {
     src: url("ppneuebit-bold.woff") format(woff);
 }
 
+
+
 h1{
-    font-family: "PPBold";
+    font-family: "franklin-gothic-condensed", sans-serif;
+    font-weight: 600;
     font-size: 200px;
+    font-style: normal;
+}
+
+h2{
+    font-family: "PPBold";
+    font-size: 100px;
 }
