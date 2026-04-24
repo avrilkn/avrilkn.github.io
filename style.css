@@ -1,3 +1,19 @@
 body {
     background-color: aqua;
+
+}
+
+@font-face {
+    font-family: "PPRegular";
+    src: url("ppmondwest-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PPBold";
+    src: url("ppneuebit-bold.woff") format(woff);
+}
+
+h1{
+    font-family: "PPBold";
+    font-size: 200px;
 }
