@@ -1,5 +1,5 @@
 body {
-    background-color: aqua;
+   
 
 }
 
@@ -23,4 +23,31 @@ h1{
 h2{
     font-family: "PPBold";
     font-size: 100px;
+}
+
+div.title {
+    text-align: center;
+    margin-bottom: -160px;
+    background-color: aqua;
+
+}
+
+div.contents {
+    text-align: center;
+}
+
+div.box {
+    width: 460px;;
+    background-color: azure;
+    font-family: univers-next-pro, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72;
+    margin-left: auto;
+    padding: 20;
+    border-radius: 20px;
+}
+
+div.box{
+    
 }
