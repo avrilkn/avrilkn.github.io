@@ -28,7 +28,10 @@ h2{
 div.title {
     text-align: center;
     margin-bottom: -160px;
-    background-color: aqua;
+    background-color: rgb(201, 201, 201);
+    box-shadow: 10px 10px 10px black;
+    border-radius: 10px;
+    
 
 }
 
