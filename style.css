@@ -16,27 +16,68 @@ body {
 h1{
     font-family: "franklin-gothic-condensed", sans-serif;
     font-weight: 600;
-    font-size: 200px;
     font-style: normal;
+    text-shadow:
+    2px 2px 20px  rgba(58, 58, 58, 0.5),
+    5px -5px hsl(0, 0%, 90%),
+    10px -10px hsl(0, 0%, 80%),
+    15px -15px hsl(0, 0%, 70%),
+    20px -20px hsl(0, 0%, 60%),
+    25px -25px hsl(0, 0%, 50%),
+    30px -30px hsl(0, 0%, 40%),
+    35px -35px hsl(0, 0%, 30%),
+    40px -40px hsl(0, 0%, 20%),
+    45px -45px hsl(0, 0%, 10%),
+    50px -50px hsl(0, 0%, 0%),
+    55px -55px hsl(0, 0%, 10%),
+    60px -60px hsl(0, 0%, 20%),
+    65px -65px hsl(0, 0%, 30%),
+    70px -70px hsl(0, 0%, 40%),
+    75px -75px hsl(0, 0%, 50%),
+    80px -80px hsl(0, 0%, 60%),
+    85px -85px hsl(0, 0%, 70%),
+    90px -90px hsl(0, 0%, 80%),
+    95px -95px hsl(0, 0%, 90%),
+    100px -100px hsl(0, 0%, 100%),
+    105px -105px hsl(0, 0%, 90%),
+    110px -110px hsl(0, 0%, 80%),
+    115px -115px hsl(0, 0%, 70%),
+    120px -120px hsl(0, 0%, 60%),
+    125px -125px hsl(0, 0%, 50%),
+    130px -130px hsl(0, 0%, 40%),
+    135px -135px hsl(0, 0%, 30%),
+    140px -140px hsl(0, 0%, 20%),
+    145px -145px hsl(0, 0%, 10%);
+    font-kerning: normal;
+
 }
 
 h2{
     font-family: "PPBold";
-    font-size: 100px;
+    font-size: 30px;
 }
 
-div.title {
+title{ 
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+
+div.titlefont {
     text-align: center;
-    margin-bottom: -160px;
-    background-color: rgb(201, 201, 201);
-    box-shadow: 10px 10px 10px black;
-    border-radius: 10px;
-    
+    width: 1300px;
+    color:whitesmoke;
+    padding: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:-120px;
 
 }
 
 div.contents {
     text-align: center;
+    background-image: url("5052125139_ef639c2aa7_o.jpg");
 }
 
 div.box {
@@ -49,8 +90,85 @@ div.box {
     margin-left: auto;
     padding: 20;
     border-radius: 20px;
+
 }
 
-div.box{
-    
+div.boxscroll{
+    width: 460px;
+    height:200px;
+    background-color: white;
+    font-family: univers-next-pro, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 16px;
+    overflow:scroll;
+}
+
+div.width50{
+    width: 50%;
+    margin-right: auto;
+    height: 300;
+
+
+}
+
+div.label{
+    text-transform: uppercase;
+    font-size: 20pt;
+    letter-spacing: 2pt;   
+}
+
+div.title{
+    text-transform: uppercase;
+    font-size: 100px;
+}
+
+div.body{
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 32px;
+    max-width: 900px;  
+}
+
+div.footnote{
+    font-size: 12px;
+    margin-top: 20px;
+    background-image: url(mountain.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.quote{
+    text-transform: uppercase;
+    font-size: 20pt;
+    letter-spacing: 2pt;   
+}
+
+div.container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+div.background{
+    background-image: url(moon.jpg);
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top:-20px;
+}
+
+div.comment{
+    background-color: lightskyblue;
+    box-shadow: 5px 5px 10px gray;
+    padding: 10px;
+
+}
+
+img {
+    width:100%
+}
+
+img.border {
+    border:10px solid white;
 }
