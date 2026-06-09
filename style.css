@@ -75,6 +75,14 @@ h3{
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
+h4{
+    font-family: "PPBold";
+    font-size: 40pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
 h5{
     font-family: "PPBold";
     font-size: 20pt;
@@ -82,16 +90,20 @@ h5{
     margin-bottom: 1px;
     margin-left: 16pt;
     color: white;
+    mix-blend-mode: exclusion;
 }
 h6{
     font-family: "PPBold";
-    font-size: 40pt;
+    font-size: clamp(20pt,  0rem + 3.333vi, 60pt);
     margin-top: 1px;    
     margin-bottom: 1px;
     margin-right: 10pt;
     margin-left: 10pt;
-    line-height: 20pt;
+    line-height: 30%;
+    padding: 10px;
     color: white;
+    mix-blend-mode: difference;
+    align-content: center;
 }
 
 title{ 
@@ -100,20 +112,45 @@ title{
     background-repeat:no-repeat;
 }
 
+/*fun*/
+
+.UD-text {
+  display: inline-block; 
+  transform: rotate(180deg); 
+  margin: 0px; 
+  text-align: center;
+}
+
+.perp-textR{
+    display: inline-block;
+  transform: rotate(90deg);
+  transform-origin: top left;
+  width: 120px;
+  white-space: nowrap;
+  position: absolute;
+  right: -20pt; 
+  top: 40pt;    
+}
+.perp-textL{
+    display: inline-block; 
+  transform: rotate(-90deg); 
+  
+}
+
 
 /*divs*/
 
-div.body{
+.body{
     font-size: 28px;
     line-height: 32px;
     margin-top: 32px;
 }
 
-div.box {
+.box {
     margin-left: auto;
 }
 
-div.boxscroll{
+.boxscroll{
     width: 460px;
     height:200px;
     background-color: white;
@@ -125,52 +162,55 @@ div.boxscroll{
     overflow:scroll;
 }
 
-div.borderB{
+.borderB{
     border-bottom: 5px solid black;
     width: auto;
 }
 
-div.borderT{
+.borderT{
     border-top: 5px solid black;
     width: auto;
 }
 
-div.borderR{
+.borderR{
   border-right: 6px solid black;
   height: 300px;
   padding-left: 40px;
   margin-right: 60px;
 }
 
-div.background{
-    background-image: url(lil.jpg);
-    background-position-x: left;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width:100%;
-}
 
-div.comment{
+.comment{
     background-color: lightskyblue;
     box-shadow: 5px 5px 10px gray;
     padding: 10px;
 
 }
 
-div.columns {
+.columns {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
-  padding:80px
+  padding:30px;
+  width: clamp(50%, 70vw, 70%);
+  flex-shrink: 0;
+  border-radius: 10px;
 }
 
 
-div.container{
+.container{
     display: flex;
     flex-wrap: wrap;
 }
 
-div.footnote{
+.containerinner{
+    display: flex;
+    position: relative;
+    width:100%;
+    margin:auto;
+    justify-content: center;
+}
+.footnote{
     font-size: 12px;
     margin-top: 20px;
     background-image: url(mountain.jpg);
@@ -179,60 +219,83 @@ div.footnote{
     background-repeat: no-repeat;
 }
 
-div.intro{
+.intro{
     font-size: 18px;
     line-height: 24px;
     margin-top: 2px;
     max-width: 900px;  
 }
 
-div.justify{
+.justify{
     text-align: justify;
 }
 
-div.label{
+.label{
     text-transform: uppercase;
     font-size: 20pt;
     letter-spacing: 2pt;   
 }
 
-div.nav {
+.abs{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.marker{
+    display: none;
+}
+
+.marker-right{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15%;
+  text-align: right;
+  visibility: visible;
+}
+
+.nav {
   position:fixed;
   top:0px;
   right:0px;
   width:auto;
   text-align: left ;
-  padding:10px;
   mix-blend-mode: difference;
 }
 
-div.scroll {
+.scroll {
   position:fixed;
   top:0px;
   left:0px;
   width:20%;
-  height:100vh;
+  height:100%;
   text-align: right ;
   padding:10px;
+  overflow: visible;
 }
 
-div.subtitle{
+.spacer{
+    width:100%;
+    height:10%;
+}
+
+.subtitle{
     text-align: center;
     width: 100%;
     padding: 20px;
 }
-div.quote{
+.quote{
     text-transform: uppercase;
     font-size: 20pt;
     letter-spacing: 2pt;   
 }
 
-div.title{
+.title{
     text-transform: uppercase;
     font-size: 100px;
 }
 
-div.titlefont {
+.titlefont {
     color:whitesmoke;
     padding: 20px;
     width: 100%;
@@ -240,43 +303,64 @@ div.titlefont {
 
 }
 
-div.left{
+.left{
     text-align: left;
 }
 
-div.right{
+.right{
     text-align: right;
 }
 
-div.white{
+
+/*colours*/
+
+.black{
+    background-color: black;
+}
+
+.blacktext{
+    color: black;
+}
+
+
+.white{
     background-color: white;
 }
 
-div.whitetext{
+.whitetext{
    color:white;
 }
 
 /*widths why are some of them margined and not hmm */
 
-div.width50{
+.width50{
     width: 50%;
     margin-right: auto;
     height: 300;
 }
 
-div.width40{
+.width40{
     width: 40%;
     height: auto;
     padding-right: 40px;
 }
 
-div.width60{
+.width60{
     width: 100%;
     height: auto;
     margin-left: 60%;
 }
 
 /*images*/
+
+
+.background{
+    background-image: url(lil.jpg);
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+}
 
 img {
     width:100%
@@ -289,27 +373,55 @@ img.border {
 
 /*details*/
 
-details summary {
-  list-style:none;
-  cursor:pointer;
+div.nav-menu{
+    display: inline-block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
 }
 
-details summary::-webkit-details-marker {
-  display: none;
-}
-
-.nav-menu {
-  padding-bottom: 10px; /* extends the hover zone downward */
-}
-
-.nav-menu h6 {
+div.nav-menu h6 {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
-.nav-links {
+div.nav-links {
   display: none;
   margin-top: 0;
+  padding-top: 0;
 }
 
-.nav-menu:hover .nav-links {
+div.nav-menu:hover .nav-links {
   display: block;
+}
+
+a:link{
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+    background-color: transparent;
+    text-decoration: wavy;
+}
+
+a:hover{
+    color:skyblue;
+    background-color: transparent;
+    text-decoration:wavy;
+}
+
+a:active{
+    color: yellowgreen  ;
+    background-color: transparent;
+    text-decoration: dashed;
+}
+
+/*mobile considerations*/
+@media (max-width: 768px) {
+  div.nav-menu {
+    display: none;
+  }
 }
