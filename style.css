@@ -19,11 +19,14 @@ body {
     margin: 0  ;
 }
 
+/*headings*/
+
 h1{
     font-family: "franklin-gothic-condensed", sans-serif;
     font-weight: 600;
-    font-size: 120px;
+    font-size: clamp(3.75rem, -2.5rem + 16.667vi, 10rem);
     font-style: normal;
+    text-transform: uppercase;
     text-shadow:
     2px 2px 20px  rgba(58, 58, 58, 0.5),
     5px -5px hsl(0, 0%, 90%),
@@ -55,8 +58,6 @@ h1{
     135px -135px hsl(0, 0%, 30%),
     140px -140px hsl(0, 0%, 20%),
     145px -145px hsl(0, 0%, 10%);
-    font-kerning: normal;
-
 }
 
 h2{
@@ -71,13 +72,21 @@ h3{
     margin-top: 2px;
     margin-bottom: 2px;
 }
-
+h5{
+    font-family: "PPBold";
+    font-size: 60px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 10pt;
+    color: white;
+}
 h6{
     font-family: "PPBold";
     font-size: 60px;
     margin-top: 1px;
     margin-bottom: 1px;
     margin-right: 10pt;
+    color: white;
 }
 
 title{ 
@@ -87,6 +96,7 @@ title{
 }
 
 
+/*divs*/
 
 div.body{
     font-size: 28px;
@@ -132,7 +142,6 @@ div.background{
     background-position-x: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top:-20px;
     width:100%;
 }
 
@@ -192,9 +201,16 @@ div.nav {
   width:auto;
   text-align: left ;
   padding:10px;
-  background-color: white;
-  border-bottom:2px solid black;
-  border-left:2px solid black;
+  mix-blend-mode: difference;
+}
+
+div.scroll {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:auto;
+  text-align: right ;
+  padding:10px;
 }
 
 div.quote{
@@ -211,9 +227,9 @@ div.title{
 div.titlefont {
     color:whitesmoke;
     padding: 0px;
-    margin-left:33%;
-    margin-right: auto;
     margin-bottom:-150px;
+    width: 100%;
+    text-align: center;
 
 }
 
@@ -233,6 +249,8 @@ div.whitetext{
    color:white;
 }
 
+/*widths why are some of them margined and not hmm */
+
 div.width50{
     width: 50%;
     margin-right: auto;
@@ -251,10 +269,24 @@ div.width60{
     margin-left: 60%;
 }
 
+/*images*/
+
 img {
     width:100%
 }
 
 img.border {
     border:10px solid white;
+}
+
+
+/*details*/
+
+details summary {
+  list-style:none;
+  cursor:pointer;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
 }
