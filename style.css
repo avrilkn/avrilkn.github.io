@@ -14,9 +14,12 @@
 
 }
 
+
+
 body {
     font-family: univers-next-pro, sans-serif;
     margin: 0  ;
+    cursor:crosshair;
 }
 
 /*headings*/
@@ -60,6 +63,7 @@ h1{
     135px -135px hsl(0, 0%, 30%),
     140px -140px hsl(0, 0%, 20%),
     145px -145px hsl(0, 0%, 10%);
+    mix-blend-mode:screen   ;
 }
 
 h2{
@@ -128,8 +132,10 @@ title{
   width: 120px;
   white-space: nowrap;
   position: absolute;
-  right: -20pt; 
-  top: 40pt;    
+  right: -60pt; 
+  top: 40pt;
+  border-left: 2pt solid white;
+  border-width: auto   ;
 }
 .perp-textL{
     display: inline-block; 
@@ -168,7 +174,7 @@ title{
 }
 
 .borderT{
-    border-top: 5px solid black;
+    border-top: 5px solid white;
     width: auto;
 }
 
@@ -395,6 +401,7 @@ div.nav-menu:hover .nav-links {
   display: block;
 }
 
+
 a:link{
     color: white;
     background-color: transparent;
@@ -404,13 +411,19 @@ a:link{
 a:visited{
     color: white;
     background-color: transparent;
-    text-decoration: wavy;
+    text-decoration: none;
+}
+
+a:visited .marker-right{
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
 }
 
 a:hover{
     color:skyblue;
     background-color: transparent;
-    text-decoration:wavy;
+    text-decoration:none;
 }
 
 a:active{
@@ -418,6 +431,39 @@ a:active{
     background-color: transparent;
     text-decoration: dashed;
 }
+
+button.comment {
+  display: none;
+}
+
+
+button:hover .replies {
+  display: none;
+}
+
+button:hover .comment {
+  display: inline;
+}
+
+.replies {
+  display: inline;
+}
+
+.comment {
+  display: none;
+}
+
+.button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: crosshair;
+  display: block;
+  text-align: left;
+
+}
+
 
 /*mobile considerations*/
 @media (max-width: 768px) {
