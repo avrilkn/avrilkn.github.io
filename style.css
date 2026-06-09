@@ -17,7 +17,8 @@
 
 
 body {
-    font-family: univers-next-pro, sans-serif;
+    font-family: univers-next-pro-bold, sans-serif;
+    letter-spacing: 1px;
     margin: 0  ;
     cursor:crosshair;
 }
@@ -82,10 +83,15 @@ h3{
 
 h4{
     font-family: "PPBold";
-    font-size: 40pt;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: left;
+    font-size: 16pt;
+    line-height: 8pt;
+    margin-top: 22px;    
+    margin-bottom: 1px;
+    margin-right: 20pt;
+    margin-left: 10pt;
+    color: white;
+    mix-blend-mode: difference;
+    align-content: center;
 }
 h5{
     font-family: "PPBold";
@@ -143,6 +149,9 @@ title{
   
 }
 
+.padding{
+    padding-top: 210pt;
+}
 
 /*divs*/
 
@@ -183,14 +192,6 @@ title{
   height: 300px;
   padding-left: 40px;
   margin-right: 60px;
-}
-
-
-.comment{
-    background-color: lightskyblue;
-    box-shadow: 5px 5px 10px gray;
-    padding: 10px;
-
 }
 
 .columns {
@@ -409,51 +410,31 @@ a:link{
 }
 
 a:visited{
-    color: white;
+    color: lightgrey;
     background-color: transparent;
     text-decoration: none;
 }
 
 a:visited .marker-right{
-    color: red;
+    color: lightgrey;
     background-color: transparent;
     text-decoration: none;
 }
 
 a:hover{
-    color:skyblue;
+    color:darkred;
     background-color: transparent;
     text-decoration:none;
 }
 
 a:active{
-    color: yellowgreen  ;
+    color: black  ;
     background-color: transparent;
-    text-decoration: dashed;
-}
-
-button.comment {
-  display: none;
+    text-decoration: none;
 }
 
 
-button:hover .replies {
-  display: none;
-}
-
-button:hover .comment {
-  display: inline;
-}
-
-.replies {
-  display: inline;
-}
-
-.comment {
-  display: none;
-}
-
-.button {
+button {
   background: none;
   border: none;
   padding: 0;
@@ -461,7 +442,24 @@ button:hover .comment {
   cursor: crosshair;
   display: block;
   text-align: left;
+  color: white;
+}
 
+.replies {
+  display: inline;
+}
+
+.nav-links .comment {
+  display: none;
+  color:darkred;
+}
+
+button:hover .replies {
+  display: none;
+}
+
+button:hover .comment {
+  display: inline;
 }
 
 
