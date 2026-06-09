@@ -1,8 +1,3 @@
-body {
-   
-
-}
-
 @font-face {
     font-family: "PPRegular";
     src: url("ppmondwest-regular.woff") format("woff");
@@ -13,9 +8,21 @@ body {
     src: url("ppneuebit-bold.woff") format(woff);
 }
 
+@font-face {
+    font-family: "Univers";
+    src: url()
+
+}
+
+body {
+    font-family: univers-next-pro, sans-serif;
+    margin: 0  ;
+}
+
 h1{
     font-family: "franklin-gothic-condensed", sans-serif;
     font-weight: 600;
+    font-size: 120px;
     font-style: normal;
     text-shadow:
     2px 2px 20px  rgba(58, 58, 58, 0.5),
@@ -54,7 +61,23 @@ h1{
 
 h2{
     font-family: "PPBold";
-    font-size: 30px;
+    font-size: 40px;
+}
+
+h3{
+    font-size: 18pt;
+    font-weight: 600;
+    line-height: 22pt;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+h6{
+    font-family: "PPBold";
+    font-size: 60px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 10pt;
 }
 
 title{ 
@@ -64,33 +87,15 @@ title{
 }
 
 
-div.titlefont {
-    text-align: center;
-    width: 1300px;
-    color:whitesmoke;
-    padding: 0px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom:-120px;
 
-}
-
-div.contents {
-    text-align: center;
-    background-image: url("5052125139_ef639c2aa7_o.jpg");
+div.body{
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 32px;
 }
 
 div.box {
-    width: 460px;;
-    background-color: azure;
-    font-family: univers-next-pro, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 72;
     margin-left: auto;
-    padding: 20;
-    border-radius: 20px;
-
 }
 
 div.boxscroll{
@@ -105,30 +110,53 @@ div.boxscroll{
     overflow:scroll;
 }
 
-div.width50{
-    width: 50%;
-    margin-right: auto;
-    height: 300;
+div.borderB{
+    border-bottom: 5px solid black;
+    width: auto;
+}
 
+div.borderT{
+    border-top: 5px solid black;
+    width: auto;
+}
+
+div.borderR{
+  border-right: 6px solid black;
+  height: 300px;
+  padding-left: 40px;
+  margin-right: 60px;
+}
+
+div.background{
+    background-image: url(moon.jpg);
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top:-20px;
+    width:100%;
+}
+
+div.comment{
+    background-color: lightskyblue;
+    box-shadow: 5px 5px 10px gray;
+    padding: 10px;
 
 }
 
-div.label{
-    text-transform: uppercase;
-    font-size: 20pt;
-    letter-spacing: 2pt;   
+div.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding:80px
 }
 
-div.title{
-    text-transform: uppercase;
-    font-size: 100px;
+div.contents{
+    margin-bottom: -800px;
 }
 
-div.body{
-    font-size: 28px;
-    line-height: 32px;
-    margin-top: 32px;
-    max-width: 900px;  
+div.container{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 div.footnote{
@@ -140,29 +168,87 @@ div.footnote{
     background-repeat: no-repeat;
 }
 
+div.intro{
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 2px;
+    max-width: 900px;  
+}
+
+div.justify{
+    text-align: justify;
+}
+
+div.label{
+    text-transform: uppercase;
+    font-size: 20pt;
+    letter-spacing: 2pt;   
+}
+
+div.nav {
+  position:fixed;
+  top:0px;
+  right:0px;
+  width:auto;
+  text-align: left ;
+  padding:10px;
+  background-color: white;
+  border-bottom:2px solid black;
+  border-left:2px solid black;
+}
+
 div.quote{
     text-transform: uppercase;
     font-size: 20pt;
     letter-spacing: 2pt;   
 }
 
-div.container{
-    display: flex;
-    flex-wrap: wrap;
-
-}
-div.background{
-    background-image: url(moon.jpg);
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-top:-20px;
+div.title{
+    text-transform: uppercase;
+    font-size: 100px;
 }
 
-div.comment{
-    background-color: lightskyblue;
-    box-shadow: 5px 5px 10px gray;
-    padding: 10px;
+div.titlefont {
+    color:whitesmoke;
+    padding: 0px;
+    margin-left:33%;
+    margin-right: auto;
+    margin-bottom:-150px;
 
+}
+
+div.left{
+    text-align: left;
+}
+
+div.right{
+    text-align: right;
+}
+
+div.white{
+    background-color: white;
+}
+
+div.whitetext{
+   color:white;
+}
+
+div.width50{
+    width: 50%;
+    margin-right: auto;
+    height: 300;
+}
+
+div.width40{
+    width: 40%;
+    height: auto;
+    padding-right: 40px;
+}
+
+div.width60{
+    width: 100%;
+    height: auto;
+    margin-left: 60%;
 }
 
 img {
