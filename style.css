@@ -13,14 +13,21 @@
     src: url()
 
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
 
 body {
     font-family: univers-next-pro-bold, sans-serif;
     letter-spacing: 1px;
+    font-size: clamp(0.556rem, 0.238rem + 1.143vi, 1rem);
     margin: 0  ;
     cursor:crosshair;
+    overflow-x:hidden;
 }
 
 /*headings*/
@@ -116,11 +123,70 @@ h6{
     align-content: center;
 }
 
+blockquote.quote-style {    
+  font-family: univers-next-pro-condensed, sans-serif;
+  margin:0;
+  padding:10;
+  word-spacing: -2pt;
+  font-style: italic;
+  text-transform: lowercase;
+  line-height: 20pt;
+  font-weight: 600;
+  font-size: 20pt;
+  background-color: #f9f9f9;
+  border-top: solid 5px black;  
+  border-bottom: solid 5px black;
+  text-align: center;
+}
+blockquote.callout-style {    
+  font-family: univers-next-pro-condensed, sans-serif;
+  margin:0;
+  padding:10;
+  word-spacing: -2pt;
+  font-style: italic;
+  text-transform: lowercase;
+  line-height: 30pt;
+  font-weight: 600;
+  font-size: 20pt;
+  background-color: #f9f9f9;
+  border-top: solid 5px black;  
+  border-bottom: solid 5px black;
+  text-align: center;
+}
+
 title{ 
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
 }
+
+.bot{
+    text-align: end;
+}
+
+.centered {
+    text-align: justify;
+    align-content: center;
+    
+    width:100%;
+    height: 300px;
+}
+
+.callout{
+    color: white;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.colophon{
+    color: white;
+    text-align: left;
+}
+
+
 
 /*fun*/
 
@@ -129,6 +195,7 @@ title{
   transform: rotate(180deg); 
   margin: 0px; 
   text-align: center;
+  mix-blend-mode: difference;
 }
 
 .perp-textR{
@@ -149,8 +216,12 @@ title{
   
 }
 
-.padding{
+.padding-top{
     padding-top: 210pt;
+}
+
+.padding{
+    padding:10pt;
 }
 
 /*divs*/
@@ -162,7 +233,9 @@ title{
 }
 
 .box {
-    margin-left: auto;
+    background-color: transparent;
+    border-radius: 10px;
+    margin:0px;
 }
 
 .boxscroll{
@@ -312,6 +385,7 @@ title{
 
 .left{
     text-align: left;
+    position: fixed;
 }
 
 .right{
@@ -340,10 +414,19 @@ title{
 
 /*widths why are some of them margined and not hmm */
 
-.width50{
-    width: 50%;
-    margin-right: auto;
-    height: 300;
+
+.width10{
+    width: 10%;
+    margin: 1%;
+}
+
+.width20{
+    width: 20%;
+    margin: 1%;
+}
+
+.width30{
+    width: 30%;
 }
 
 .width40{
@@ -352,10 +435,32 @@ title{
     padding-right: 40px;
 }
 
+
+.width50{
+    width: 50%;
+    margin-right: auto;
+    height: 300;
+}
+
 .width60{
-    width: 100%;
+    width: 60%;
     height: auto;
-    margin-left: 60%;
+}
+
+.width70{
+    width: 70%;
+}
+
+.width80{
+    width: 80%;
+}
+
+.width90{
+    width: 90%;
+}
+
+.width100{
+    width: 100%;
 }
 
 /*images*/
@@ -376,6 +481,60 @@ img {
 img.border {
     border:10px solid white;
 }
+
+.hmmt{
+    background-image: url(galaxyascii.gif);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    filter: invert(100%);
+    }
+
+.hmm {
+    position: relative;
+    width: 100%;
+}
+
+.hmm video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hmm-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.earthset{
+    background-image: url(earthset.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100%
+}
+
+
+.earthset{
+    background-image: url(earthset.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100%
+}
+
+
+
+.auto{
+    margin-right: auto;
+    height: fit-content;
+}
+
 
 
 /*details*/
@@ -460,6 +619,31 @@ button:hover .replies {
 
 button:hover .comment {
   display: inline;
+}
+
+.scrolly{
+  text-transform:uppercase;
+  background-color: cyan;
+  height: 30pt;
+  width: fit-content;
+  padding-top: 10px;
+  color: white;
+  font-size:inherit;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: floatText 35s linear infinite;
+  padding-left: 100%;
+  overflow-x: hidden;
+
+}
+
+@keyframes floatText {
+  0% {transform: translateX(10%);
+  }
+  100%{transform: translateX(-100%);
+
+  }
 }
 
 
