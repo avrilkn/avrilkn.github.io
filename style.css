@@ -234,8 +234,15 @@ title{
 
 .box {
     background-color: transparent;
-    border-radius: 10px;
     margin:0px;
+    overflow: hidden;
+}
+.box-cover{
+    background-color: transparent;
+    margin:0px;
+    height:100%;
+border-radius: 10px;;
+    overflow: hidden;
 }
 
 .boxscroll{
@@ -393,6 +400,7 @@ title{
 }
 
 
+
 /*colours*/
 
 .black{
@@ -465,6 +473,13 @@ title{
 
 /*images*/
 
+.box img.cover{
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 
 .background{
     background-image: url(lil.jpg);
@@ -494,6 +509,12 @@ img.border {
 .hmm {
     position: relative;
     width: 100%;
+}
+
+video{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .hmm video {
@@ -535,6 +556,9 @@ img.border {
     height: fit-content;
 }
 
+.mxwidth {
+    max-width: 30%;
+}
 
 
 /*details*/
